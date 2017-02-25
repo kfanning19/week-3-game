@@ -92,23 +92,30 @@ function checkLetters (letter) {
 }
 // Determine what ends the game
 function roundComplete () {
+	// Display updated information to user
 	document.getElementById("word-blanks").innerHTML = blanksSuccesses.join(" ");
 	document.getElementById("guesses-left").innerHTML = guessLeft;
 	document.getElementById ("wrong-guesses").innerHTML = wrongGuess.join(" ");
 
+
+	// Determine that you win if all blanks are filled in 
 	if (letterInChosenWord.join (" ") === blanksSuccesses.join (" ")){
 		wins++;
+
+		// Add delay so full word is displayed before game ends
 		setTimeout(function(){ alert("You Won!"); }, 3);
-	
+		
+		// Increase win count and restart
 		document.getElementById("win-counter").innerHTML = wins;
 		startGame();
-
-		console.log (blanksSuccesses)
 	}
 
+	// If you run out of guesses before all blanks are filled...
 	else if (guessLeft === 0){
+
+		// Add to losses, let them know, increase loss count, and restart
 		losses++;
-		setTimeout(function(){ alert("You Lost!"); }, 3);
+		alert("You Lost!");
 		document.getElementById("loss-counter").innerHTML = losses;
 		startGame ();
 
