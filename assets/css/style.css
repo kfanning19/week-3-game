@@ -5,10 +5,23 @@ body {
     font-family: 'Sansita', sans-serif;
 }
 
+/*general*/
+.panel {
+	background-color: #f2e6ff;
+}
 
+.panel-default .panel-heading{
+	background-color:  #5900b3;
+	color: #fff;
+}
 
+/*header*/
 .page-header {
 	border-bottom: none;
+}
+
+h1 {
+	font-size: 48px;
 }
 
 /*Display box*/
