@@ -1,0 +1,22 @@
+body {
+	text-align: center;
+	background: url("../images/background.jpg")no-repeat center center fixed;
+    background-size: 100% 100%;
+    font-family: 'Sansita', sans-serif;
+}
+
+
+
+.page-header {
+	border-bottom: none;
+}
+
+/*Display box*/
+#word-display{
+	padding-top: 72px;
+	padding-bottom: 72px;
+}
+
+h3{
+	font-size: 52px;
+}
